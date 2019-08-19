@@ -1,0 +1,95 @@
+id, 
+name,
+in_stock,
+sku,
+price,
+old_price,
+subtitle,
+amount,
+images,
+desc,
+details,
+reviews,
+flags
+
+
+multiple addresses убрать из корзины			\/
+редактирование из корзины убираем			\/
+
+Пальчик							\/
+
+на слайдере белые кнопки дать тень
+
+Сначала вывод товаров,
+затем инициализация слайдера
+
+Сабскрайб 
+
+Джквери по сидиэн и паралакс					\/
+Паралакс джквери слайдер папку удалить и подключить по сидиенк		\/
+
+Упорядочить картинки
+
+Опен сервер и ссылки
+
+test.js 138 18      \/
+
+Log out				\/
+
+
+
+///// КОРЗИНА Шаблонная строка
+
+`<li class="cart_products_li">
+                                 <div class="product_cart">
+                                     <div class="img_cart">
+                                       <div class="icon_cart">
+                                            <div class="buttons_img_cart">
+                                                <button class="pencil_cart"><ion-icon name="trash"></ion-icon></button>
+                                            </div>
+                                             <a href="#"><img src="${item.image.src}" alt="${item.image.alt}"></a>
+                                         </div>
+                                         <a href="${item.id}">${item.name}</a>
+                                     </div>
+                                     <div class="price_wrap_cart">
+                                        <span class="display_none_cart">Price</span>
+                                         <span>${item.currency}${item.price}</span>
+                                     </div>
+                                     <div class="col_prod_cart">
+                                         <form action="">
+                                             <span class="display_none_cart">Qty</span>
+                                             <input type="number" class="input_cart" placeholder="1" value="${item.amount}"/>
+                                         </form>
+                                     </div>
+                                     <div class="totalprice_cart">
+                                         <span class="display_none_cart">Subtotal</span>
+                                         <span>${item.currency}${item.price * item.amount}</span>
+                                     </div>
+                                 </div>
+                             </li>`;
+
+
+////продукты в слайдере шаблонная строка
+
+`<div class="product_top_wrap">
+                       <span class="flags_${item.flag.value}">${item.flag.label}</span>
+                        <a href="#">${images}</a>
+                        <div class="price_wrap">
+                            <span class="price_new">${item.currency}${item.price}</span>
+                            <s>${item.currency}${item.old_price}</s>
+                        </div>
+                        <a href="#" class="span_wrap_prod">${item.name}</a>
+                        <button class="button_prod" data-product-value="${item.id}"><ion-icon name="cart"></ion-icon>ADD TO CART</button>
+                        <div class="stars">
+                            <ion-icon name="star-outline"></ion-icon>
+                            <ion-icon name="star-outline"></ion-icon>
+                            <ion-icon name="star-outline"></ion-icon>
+                            <ion-icon name="star-outline"></ion-icon>
+                            <ion-icon name="star-outline"></ion-icon>
+                            <a href="#" class="review">1 Review</a>
+                        </div>
+                        <div class="favour">
+                            <a href="#"><ion-icon name="heart-empty"></ion-icon></a>
+                            <a href="#" class="balance"><img src="img/balance.svg" alt=""></a>
+                        </div>
+                  </div>`;
